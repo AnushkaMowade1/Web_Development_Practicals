@@ -1,0 +1,67 @@
+body {font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;}
+.contact-form {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 100%;
+max-width: 600px;}
+.contact-form h2 {
+text-align: center;
+margin-bottom: 20px;}
+.form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;}
+.form-group label {
+margin-bottom: 5px;
+font-weight: bold; }
+.form-group input, .form-group textarea {
+padding: 10px;
+border: 1px solid #ccc;
+font-size: 16px;}
+.form-group textarea {
+resize: vertical;
+min-height: 100px;}
+.form-group button {
+padding: 10px;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;}
+.form-group button:hover {
+background-color: #555;}
+/* Media queries for responsiveness */
+/* Small screens (mobile phones) */
+@media (max-width: 600px) {
+.contact-form {padding: 10px; }
+.form-group input,.form-group textarea {
+font-size: 14px;}
+.form-group button {
+font-size: 14px;
+}}
+/* Medium screens (tablets and small laptops) */
+@media (min-width: 601px) and (max-width: 900px) {
+.contact-form { padding: 20px; }
+ .form-group input,.form-group textarea {font-size: 16px; }
+.form-group button {font-size: 16px;}}
+ /* Large screens (desktops) */
+ @media (min-width: 901px) {
+ .contact-form { padding: 30px;}
+.form-group input,.form-group textarea {font-size: 18px; }
+ .form-group button {
+ font-size: 18px;}
+.form-group {flex-direction: row;
+justify-content: space-between;}
+.form-group label { margin-right: 10px;}
+.form-group input,.form-group textarea { width: 48%;}
+.form-group textarea {width: 100%;}}

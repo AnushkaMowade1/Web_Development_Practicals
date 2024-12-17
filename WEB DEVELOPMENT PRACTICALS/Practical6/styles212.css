@@ -1,0 +1,73 @@
+body {
+
+background-color:gray;}
+
+h1{font-size:50px;
+
+color:white;
+
+text-align:center;}
+
+.sb{
+
+width: 250px;
+
+height: 30px;
+
+border-radius: 5px;
+
+}
+
+.images {
+
+display: flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding-left: 0;
+
+margin: 0;
+
+flex-wrap:wrap;
+
+gap: 10px;
+
+font-size:20px;
+
+color:white;
+
+text-align:center;}
+
+#img1 img,#img2 img, #img3 img, #img4 img, #img5 img{
+
+border-radius: 10px;}
+
+.video {
+
+display: flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding-left: 0;
+
+margin: 0;
+
+border-radius: 15px;
+
+background-image: "C:\Users\HP\Pictures\saved images\informationtech.jpeg";}
+
+.audio{
+
+display: flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+Reply

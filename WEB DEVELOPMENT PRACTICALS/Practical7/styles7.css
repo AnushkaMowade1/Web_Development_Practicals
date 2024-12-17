@@ -1,0 +1,305 @@
+@media (min-width: 768px) {
+    .navi {
+        flex-direction: row; 
+        justify-content: space-around;
+    }
+
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .navi {
+        justify-content: space-between;
+    }
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+font-size:50px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.topbg {
+    background-image:url('7backgr.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.topbg form {
+    margin-top: 20px;
+}
+
+.topbg input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+header nav {
+    background-color: #0e0d0d;
+    padding: 10px 20px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.navi {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navi li {
+    color: white;
+}
+
+.navi a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navi a:hover {
+    color: #0deabf;
+}
+
+.sb {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 8px 12px;
+    background-color: #0deabf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff7a59;
+}
+
+.logo img {
+    max-width: 100px;
+    display: block;
+    margin: 10px auto;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.tbuttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #0deabf;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tbuttons button:hover {
+    background-color: #ff7a59;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.images div {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.images img {
+    width: 100%;
+height:300px;
+    display: block;
+}
+
+.images p {
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-container {
+    background-color: #080808;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footernav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footernav a {
+    text-decoration: none;
+    color: #0deabf;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footernav a:hover {
+    color: #ff7a59;
+}
+
+.footer-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+.categories {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category-buttons button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.category-buttons button:hover {
+    background-color: #555;
+}
+.pricing {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fafafa;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pricing-option {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-option:hover {
+    transform: scale(1.05);
+}
+
+.pricing-option h4 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.pricing-option p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.pricing-option ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-option ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-option button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pricing-option button:hover {
+    background-color: #555;
+}
+.newsletter-bg {
+    background-image: url('7back.jpeg');
+    background-size: cover;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.newsletter-bg form {
+    margin-top: 20px;
+}
+
+.newsletter-bg input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-bg button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-bg button:hover {
+    background-color: #d32f2f;
+}
+
