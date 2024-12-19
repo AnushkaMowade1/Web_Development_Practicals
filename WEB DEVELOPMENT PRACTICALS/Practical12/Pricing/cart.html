@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing Page</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<!-- Billing Section -->
+<div class="bill-container">
+    <div class="bill-info">
+      <h2>Billing Details</h2>
+      <div class="course-list" id="course-list">
+        <!-- Dynamically added courses will appear here -->
+      </div>
+    </div>
+  
+    <div class="billing-summary">
+      <h2>Total Bill</h2>
+      <div class="total-info">
+        <p>Total Courses: <span id="total-courses">0</span></p>
+        <p>Total Amount: ₹<span id="total-amount">0</span></p>
+      </div>
+      <button class="checkout-btn" id="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+  </div>
+  
+<script>
+  // Function to add course to cart
+  function addToCart(courseName, price) {
+    // Get the existing cart from localStorage (or initialize if not exists)
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    // Encode course name to handle spaces and special characters
+    const encodedCourseName = encodeURIComponent(courseName);
+  
+    // Create course object
+    const course = { name: encodedCourseName, price: price };
+  
+    // Add course to the cart array
+    cart.push(course);
+  
+    // Save the updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+  
+    // Update the cart display
+    updateCart();
+  }
+  
+  // Function to update the cart UI
+  function updateCart() {
+    const courseList = document.getElementById('course-list');
+    courseList.innerHTML = ''; // Clear the current list
+  
+    // Get the cart data from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    let totalAmount = 0;
+    cart.forEach(course => {
+      totalAmount += course.price;
+  
+      // Decode course name for display
+      const decodedCourseName = decodeURIComponent(course.name);
+  
+      const courseItem = document.createElement('div');
+      courseItem.classList.add('course-item');
+      courseItem.innerHTML = `
+        <span class="course-name">${decodedCourseName}</span>
+        <span class="course-price">₹${course.price}</span>
+        <span class="remove-course" onclick="removeCourse('${course.name}')">&#10006;</span>
+      `;
+      courseList.appendChild(courseItem);
+    });
+  
+    // Update the total courses and total amount
+    document.getElementById('total-courses').innerText = cart.length;
+    document.getElementById('total-amount').innerText = totalAmount;
+  }
+  
+  // Function to remove course from cart
+  function removeCourse(encodedCourseName) {
+    // Get the existing cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    // Decode the course name
+    const decodedCourseName = decodeURIComponent(encodedCourseName);
+  
+    // Log for debugging
+    console.log("Removing course:", decodedCourseName);
+  
+    // Filter out the course that needs to be removed
+    cart = cart.filter(course => decodeURIComponent(course.name) !== decodedCourseName);
+  
+    // Save the updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+  
+    // Update the cart display
+    updateCart();
+  }
+  
+  // On page load, update the cart display
+  window.onload = updateCart; // Ensure this is called when you go back to the billing page
+  
+  </script>
+</body>
+</html>

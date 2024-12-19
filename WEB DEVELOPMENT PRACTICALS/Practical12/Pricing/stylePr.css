@@ -1,0 +1,136 @@
+.pricing {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+/* Style for the typing effect */
+.typing-effect {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    color: #33cc33; /* Green text color, resembling a terminal */
+    white-space: nowrap;
+    overflow: hidden; /* Hides text that is not yet visible */
+    border-right: 4px solid #33cc33; /* Cursor effect */
+    width: 0;
+    animation: typing 4s steps(20) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Animation for the blinking cursor */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #33cc33;
+    }
+}
+
+
+.pricing h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.pricing p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card .btn:hover {
+    background-color: #45a049;
+}
+
+/* Additional Features Section */
+.additional-features {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.additional-features h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1.1em;
+    color: #555;
+}

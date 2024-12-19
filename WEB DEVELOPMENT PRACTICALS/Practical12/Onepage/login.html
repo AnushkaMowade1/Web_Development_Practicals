@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login-box">
+        <h4>Login</h4>
+        <form id="content" action="login.php" method="POST">
+            <label for="email" id="Email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="password" id="Password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+
+            <div class="forgot-password">
+                <a href="forgot_password.php">Forgot Password?</a>
+            </div>
+            <br>
+
+            <button type="submit">Login</button>
+
+            <div class="signuplink">
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </div>
+
+            <div class="line-text">Or Sign In With</div>
+
+            <div class="logosocial">
+                <img src="../Onepage/sociallogo/logogoogle.png" alt="Google Logo" class="social-logo">
+                <img src="./sociallogo/download.png" alt="Facebook Logo" class="social-logo">
+                <img src="./sociallogo/instalogo.jpg" alt="Instagram Logo" class="social-logo">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Skills Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .back-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .course-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        .course-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .course-heading {
+            font-size: 20px;
+            color: #333;
+            margin: 15px 0;
+        }
+        .course-details {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+        .course-price {
+            font-size: 18px;
+            color: #007BFF;
+            margin: 10px 0;
+        }
+        .buy-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .buy-button:hover {
+            background-color: #218838;
+        }
+        .buy-button:disabled {
+            background-color: #ccc;
+            color: #fff;
+            cursor: not-allowed;
+        }
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">Back</button>
+    <h1>Explore Our Communication Skills Courses</h1>
+    <div class="course-container">
+        <!-- Course 1 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/public-speaking.jpg" alt="Public Speaking Mastery">
+            <div class="course-heading">Public Speaking Mastery</div>
+            <div class="course-details">Mentor: Dr. John Doe</div>
+            <div class="course-details">Duration: 3 Months</div>
+            <div class="course-details">Key Focus: Overcoming Stage Fear, Speech Crafting</div>
+            <div class="course-price">Price: ₹6,999</div>
+            <button class="buy-button" onclick="addToCart(this, 'Public Speaking Mastery', 6999)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/confidence-building.jpg" alt="Confidence Building in Communication">
+            <div class="course-heading">Confidence Building in Communication</div>
+            <div class="course-details">Mentor: Ms. Priya Sharma</div>
+            <div class="course-details">Duration: 2 Months</div>
+            <div class="course-details">Key Focus: Self-Esteem, Assertive Communication</div>
+            <div class="course-price">Price: ₹4,999</div>
+            <button class="buy-button" onclick="addToCart(this, 'Confidence Building in Communication', 4999)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/negotiation-skills.jpg" alt="Negotiation Skills">
+            <div class="course-heading">Negotiation Skills</div>
+            <div class="course-details">Mentor: Mr. Samir Patel</div>
+            <div class="course-details">Duration: 1 Month</div>
+            <div class="course-details">Key Focus: Win-Win Negotiation, Persuasion</div>
+            <div class="course-price">Price: ₹3,499</div>
+            <button class="buy-button" onclick="addToCart(this, 'Negotiation Skills', 3499)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/cross-cultural-communication.jpg" alt="Cross-Cultural Communication">
+            <div class="course-heading">Cross-Cultural Communication</div>
+            <div class="course-details">Mentor: Dr. Anita Mehta</div>
+            <div class="course-details">Duration: 3 Months</div>
+            <div class="course-details">Key Focus: Intercultural Sensitivity, Global Etiquette</div>
+            <div class="course-price">Price: ₹8,499</div>
+            <button class="buy-button" onclick="addToCart(this, 'Cross-Cultural Communication', 8499)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/active-listening.jpg" alt="Active Listening Skills">
+            <div class="course-heading">Active Listening Skills</div>
+            <div class="course-details">Mentor: Prof. Rajesh Kumar</div>
+            <div class="course-details">Duration: 1 Month</div>
+            <div class="course-details">Key Focus: Listening Techniques, Empathy</div>
+            <div class="course-price">Price: ₹2,999</div>
+            <button class="buy-button" onclick="addToCart(this, 'Active Listening Skills', 2999)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/presentation-skills.jpg" alt="Effective Presentation Skills">
+            <div class="course-heading">Effective Presentation Skills</div>
+            <div class="course-details">Mentor: Ms. Neha Singh</div>
+            <div class="course-details">Duration: 2 Months</div>
+            <div class="course-details">Key Focus: Visual Aids, Storytelling</div>
+            <div class="course-price">Price: ₹5,499</div>
+            <button class="buy-button" onclick="addToCart(this, 'Effective Presentation Skills', 5499)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/emotional-intelligence.jpg" alt="Emotional Intelligence in Communication">
+            <div class="course-heading">Emotional Intelligence in Communication</div>
+            <div class="course-details">Mentor: Mr. Arvind Gupta</div>
+            <div class="course-details">Duration: 2 Months</div>
+            <div class="course-details">Key Focus: Emotional Awareness, Conflict Resolution</div>
+            <div class="course-price">Price: ₹7,999</div>
+            <button class="buy-button" onclick="addToCart(this, 'Emotional Intelligence in Communication', 7999)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 8 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/team-communication.jpg" alt="Team Communication Skills">
+            <div class="course-heading">Team Communication Skills</div>
+            <div class="course-details">Mentor: Dr. Ravi Singh</div>
+            <div class="course-details">Duration: 1 Month</div>
+            <div class="course-details">Key Focus: Collaboration, Conflict Management</div>
+            <div class="course-price">Price: ₹3,999</div>
+            <button class="buy-button" onclick="addToCart(this, 'Team Communication Skills', 3999)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 9 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/leadership-communication.jpg" alt="Leadership Communication">
+            <div class="course-heading">Leadership Communication</div>
+            <div class="course-details">Mentor: Dr. Sunita Bhatia</div>
+            <div class="course-details">Duration: 2 Months</div>
+            <div class="course-details">Key Focus: Leadership Style, Persuasive Communication</div>
+            <div class="course-price">Price: ₹6,499</div>
+            <button class="buy-button" onclick="addToCart(this, 'Leadership Communication', 6499)">ADD TO CART</button>
+        </div>
+
+        <!-- Course 10 -->
+        <div class="course-card">
+            <img src="/courses/images/communication/crisis-communication.jpg" alt="Crisis Communication Skills">
+            <div class="course-heading">Crisis Communication Skills</div>
+            <div class="course-details">Mentor: Ms. Meera Rani</div>
+            <div class="course-details">Duration: 1 Month</div>
+            <div class="course-details">Key Focus: Crisis Management, Media Relations</div>
+            <div class="course-price">Price: ₹4,499</div>
+            <button class="buy-button" onclick="addToCart(this, 'Crisis Communication Skills', 4499)">ADD TO CART</button>
+        </div>
+    </div>
+    <script>
+        console.log('JavaScript loaded');
+
+        function addToCart(this, courseName, coursePrice) {
+    console.log("Course Name:", courseName);
+    console.log("Course Price:", coursePrice);
+  
+    // Change the button text to "Course Added"
+    button.innerText = "Course Added";
+  
+    // Optionally, disable the button to prevent multiple clicks
+    button.disabled = true;
+
+    try {
+        // Retrieve the cart from localStorage or initialize an empty array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        // Add the course to the cart
+        cart.push({ courseName: courseName, coursePrice: coursePrice });
+    
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    
+        // Optionally, log the cart for debugging purposes
+        console.log("Cart:", cart);
+    } catch (error) {
+        console.error("Error accessing localStorage:", error);
+    }
+}
+
+    </script>
+</body>
+</html>

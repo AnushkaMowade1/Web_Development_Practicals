@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .course-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .course-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+  }
+  .course-card img{
+    width:95%;
+    border-radius:20px;
+    border:5px solid rgb(175, 162, 162);
+  }
+  
+  .course-card h2 {
+    font-size: 1.5em;
+    color: #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  .course-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .course-card strong {
+    color: #000;
+  }
+  .buy-button {
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+        background-color: #a29bfe; /* Lighter purple when hovered */
+        transform: scale(1.1); /* Slightly enlarge the button */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+      
+}
+.buy-button:disabled {
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+}
+h1 {
+    font-family: 'Roboto', sans-serif; /* Professional font */
+    font-size: 2.5rem; /* Scalable and clear size */
+    color: #333; /* Neutral, professional color */
+    text-align: center; /* Center align for focus */
+    margin-bottom: 20px; /* Space below heading */
+    text-transform: uppercase; /* Uppercase for authority */
+    letter-spacing: 1px; /* Slight spacing for clarity */
+    border-bottom: 2px solid #007BFF; /* Subtle underline */
+    padding-bottom: 10px; /* Spacing for underline effect */
+}

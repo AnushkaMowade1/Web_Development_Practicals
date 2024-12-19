@@ -1,0 +1,117 @@
+body{
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+}
+header{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height:40px;
+    padding:0px;
+    margin:0px;    
+}
+nav{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    color:black;
+    list-style-type:none;
+    gap:20px;
+    height:40px;
+    padding:13px;
+    margin-bottom: 5%;
+    
+}
+a{
+text-decoration-line: none;
+color:black;
+}
+.sale{
+    background-color: rgb(235, 235, 149);
+    padding:20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#search{
+    border: 0.5px solid black;
+    border-radius: 8px;
+    width:200px;
+    height:30px;
+}
+#search:hover{
+    border-radius: 0px;
+    background-color: black;
+    color:white;
+    border-color:yellow;
+
+}
+
+.topbu{
+   width:100px;
+   height:30px;
+   font-size: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+#login{
+    background-color: black;
+    color:white;
+}
+#signup{
+    background-color: white;
+    color:black
+}
+.frontimg img{
+    width:100%;
+    margin-top:2%;
+    
+}
+.frontquote h1{
+    font-size: 200%;
+}
+.frontdisp p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:15px;
+}
+.topics nav li a{
+
+    color:rgb(141, 135, 135);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.topics nav li a:hover{
+    color:black;
+}
+.topics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.frontquote p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.offering{
+    background: linear-gradient(to right, #007bff, #00ff7f);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+.glass-box {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for frosted effect */
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Blurs the background behind the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+   
+    margin: 50px ;
+    text-align: center;
+    color: white;
+  }
+.review h1{
+    text-align: center;
+    font-size: 50px;
+}

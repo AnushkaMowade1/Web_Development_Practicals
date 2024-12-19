@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .bill-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bill-info, .billing-summary {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .bill-info h2, .billing-summary h2 {
+    color: #6a1b9a;
+    margin-bottom: 20px;
+  }
+  
+  .course-list {
+    border-right: 2px solid #6a1b9a;
+    padding-right: 20px;
+  }
+  
+  .course-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .course-name {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .remove-course {
+    cursor: pointer;
+    color: #ff0000;
+    font-size: 18px;
+  }
+  
+  .remove-course:hover {
+    color: #d40000;
+  }
+  
+  .billing-summary .total-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .checkout-btn {
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #9c4dcc;
+  }
+  
